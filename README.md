@@ -657,4 +657,4 @@ Example log entry:
 
 ## License
 
-MIT(https://github.com/mafiaguy/claude-security-guardrails#MIT-1-ov-file)
+[MIT](https://github.com/mafiaguy/claude-security-guardrails#MIT-1-ov-file)
