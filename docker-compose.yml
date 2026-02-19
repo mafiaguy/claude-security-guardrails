@@ -1,0 +1,20 @@
+services:
+  security-guardrails:
+    build: .
+    ports:
+      - "3001:3001"
+    volumes:
+      # Persist scan results and activity logs across container restarts
+      - scan-data:/app/scanner/data
+    environment:
+      - PORT=3001
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3001/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  scan-data:

@@ -1,0 +1,21 @@
+{
+  "name": "claude-security-guardrails",
+  "version": "1.0.0",
+  "description": "Security guardrails system for AI-powered development with Claude Code",
+  "private": true,
+  "workspaces": [
+    "scanner",
+    "dashboard"
+  ],
+  "scripts": {
+    "scan": "node scanner/cli.js scan",
+    "scan:results": "node scanner/cli.js results",
+    "server": "node scanner/server.js",
+    "dashboard": "npm run dev --workspace=dashboard",
+    "setup-hooks": "node hooks/setup-hooks.js",
+    "dev": "concurrently \"npm run server\" \"npm run dashboard\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

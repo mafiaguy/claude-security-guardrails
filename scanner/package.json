@@ -1,0 +1,11 @@
+{
+  "name": "scanner",
+  "version": "1.0.0",
+  "description": "Security scanning engine",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "glob": "^10.3.10"
+  }
+}

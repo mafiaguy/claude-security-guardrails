@@ -1,0 +1,8 @@
+node_modules
+dashboard/node_modules
+scanner/node_modules
+dashboard/dist
+.git
+.claude
+*.log
+.DS_Store
